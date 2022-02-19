@@ -3,12 +3,13 @@
 cmake_minimum_required(VERSION 3.16)
 project(openglunderqml LANGUAGES CXX)
 
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_PREFIX_PATH "/home/yseo/Qt/6.2.3/gcc_64")
+
+# build into the bin directory
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 
 if(NOT DEFINED INSTALL_EXAMPLESDIR)
   set(INSTALL_EXAMPLESDIR "examples")
@@ -30,7 +31,7 @@ set_target_properties(openglunderqml PROPERTIES
     MACOSX_BUNDLE TRUE
 
     # Prevent name clash with build subdirectory on case-insensitive file systems
-    OUTPUT_NAME openglunderqmlapp
+    OUTPUT_NAME viewer
 )
 target_link_libraries(openglunderqml PUBLIC
     Qt::Core
