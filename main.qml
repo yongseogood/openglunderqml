@@ -20,7 +20,7 @@ Item {
         color: Qt.rgba(1, 1, 1, 0.7)
         radius: 10
         border.width: 1
-        border.color: "white"
+        border.color: "blue"
         anchors.fill: label
         anchors.margins: -10
     }
@@ -29,7 +29,7 @@ Item {
         id: label
         color: "black"
         wrapMode: Text.WordWrap
-        text: "The background here is a squircle rendered with raw OpenGL using the 'beforeRender()' signal in QQuickWindow. This text label and its border is rendered using QML"
+        text: "Testing text"
         anchors.right: parent.right
         anchors.left: parent.left
         anchors.bottom: parent.bottom
